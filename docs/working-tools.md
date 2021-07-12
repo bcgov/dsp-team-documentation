@@ -6,10 +6,12 @@ Here we present a list of some tools we use that helps manage work in the Data S
 ## Work Tracking & Planning
 
 - Trello
- - Kanban-style project boards
- - Track and assing work
-- GitHub (tracking code-based work)
-- Sharepoint/OneDrive (meeting agendas and notes)
+  - Kanban-style project boards
+  - Tracking and assessing work
+- GitHub 
+  - Tracking code-based work
+- Sharepoint/OneDrive 
+  - Meeting agendas and notes
 
 ## Communications
 
