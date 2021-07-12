@@ -13,6 +13,12 @@
 
 ## Visualization
 
+- ggplot2
+- tmap
+- mapview
+
+
 ## Data Management
+- where possible, data should be accessed programmatically using http APIs. An example of this is the [bcdata](https://bcgov.github.io/bcdata/) package
 
 
