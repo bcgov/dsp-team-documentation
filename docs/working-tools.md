@@ -54,3 +54,4 @@ Here we present a list of some tools we use that helps manage work in the Data S
 
 ## Agile Methods in Data Science
 - [Using Agile Methodologies in Data Science](https://medium.com/better-programming/using-agile-methodologies-in-data-science-82534bd047c8)
+- [Agile Data Science with R](https://edwinth.github.io/ADSwR/agile-methods.html)
