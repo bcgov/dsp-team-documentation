@@ -3,7 +3,7 @@ Instructions for setting up a MacBook Pro in bcgov, tailored for data science wo
 ## Software:
 
 ### Point & Click:
-- [R](https://www.r-project.org/)
+- [R](https://www.r-project.org/) (and additional tools for building out packages, XQuartz, GNU Fortran 8.2 - see below for details).
 - [RStudio](https://www.rstudio.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
   - Extensions (Docker, Python, R, Git History)
@@ -45,17 +45,16 @@ The Alfred App is super handy for quickly opening files/folders <https://www.alf
 ### Terminal:
 Enable New Terminal at Folder: System Preferences > Keyboard > Shortcuts > Services (from [here](https://stackoverflow.com/questions/420456/open-terminal-here-in-mac-os-finder))
 
+You can make your terminal prettier (and more productive) in many ways... One popular terminal alternative is [iTerm2](https://www.iterm2.com/). Here is [one example](https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/) of how to use iTerm2 with the zsh shell (now the default in macOS Catalina and Big Sur) and Oh-My-ZSH.
+
 ## R
 
 ### Setup local R library location
+
 ```
 cd && mkdir Rlibrary
 echo R_LIBS=~/Rlibrary >> .Renviron
 ```
-
-### Install R build tools:
-- This installs the appropriate `clang` and `gfortran` and sets up proper paths for `CC`, `CXX`, `CXX**`, `FLIBS`, and `LDFLAGS` in the `~/.R/Makevars` file
-- Installation instructions and link to download: https://github.com/coatless/r-macos-rtools
 
 ### Java
  *Hopefully you never need this, this has not been tested lately*
@@ -66,9 +65,8 @@ echo R_LIBS=~/Rlibrary >> .Renviron
 ## [Homebrew](https://brew.sh/)
 
 ### Install Homebrew
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+
+Most up to date installation instructions [here](https://brew.sh).
 
 Installing Homebrew should also install the macOS Command Line Developer tools. You can verify this by typing:
 
@@ -82,28 +80,9 @@ If it doesn't give you an output like `/Library/Developer/CommandLineTools` you 
 xcode-select --install
 ```
 
-<details>
-
-#### Homebrew Permissions issue:
-
-*NOTE: This may no longer be relevent - untested lately*
-
-https://stackoverflow.com/questions/16432071/how-to-fix-homebrew-permissions/16450503#16450503
-
-Homebrew permissions issue fix has changed with High Sierra and Mojave <https://github.com/Homebrew/brew/issues/3228>
-
-High Sierra:
-```
-sudo chown -R $(whoami) /usr/local 
-```
-
-Mojave:
-```
-sudo chown -R $(whoami) $(brew --prefix)/*
-```
-
-</details>
-
+### Install R build tools:
+Install the appropriate `gfortran` for compiling packages from source. As of Sept 2021, the correct gfortran to install is [version 8.2](https://github.com/fxcoudert/gfortran-for-macOS/releases/tag/8.2) (for all macOS versions including Big Sur, even though it's labelled 'Mojave').
+- More detailed installation instructions and link to download: https://thecoatlessprofessor.com/programming/cpp/r-compiler-tools-for-rcpp-on-macos/
 
 ### Git: Install and configure [git](https://git-scm.com/)
 ```
@@ -130,17 +109,14 @@ gitcreds_set()
 
 At the prompt, paste the key that you previously copied from GitHub.
 
-In general, the online book [Happy Git with R](https://happygitwithr.com) provides the best and most up-to-date advice for working with R and Git/GitHub. To learn more about credential caching for git, see [this chapter](https://happygitwithr.com/credential-caching.html#credential-caching).
-
+In general, the online book [Happy Git with R](https://happygitwithr.com) provides the best and most up-to-date advice for working with R and Git/GitHub. To learn more about credential caching for git and more detailed instructions, see [this chapter](https://happygitwithr.com/credential-caching.html#credential-caching).
 
 
 ## Install a bunch of data-sciency tools 
 mostly taken from [Bob Rudis' blog](https://rud.is/b/2015/10/22/installing-r-on-os-x-100-homebrew-edition/)
 
 ```
-brew tap caskroom/cask
- 
-brew install Caskroom/cask/xquartz
+brew install xquartz
 brew cask install java
 
 # Tell R where Java is
@@ -166,8 +142,8 @@ brew tap osgeo/osgeo4mac && brew tap --repair
 brew install osgeo-gdal-filegdb
 
 ## Fira-code is a lovely coding font
-brew tap caskroom/fonts
-brew cask install font-fira-code
+brew tap homebrew/cask-fonts
+brew install font-fira-code
 
 ## imagemagick for command-line image manipulation and use of the 'magick' R package
 brew install imagemagick
