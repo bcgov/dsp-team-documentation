@@ -1,10 +1,9 @@
 Instructions for setting up a MacBook Pro in bcgov, tailored for data science workflows used by the [Data Science Partnerships] team.
 
-## Software:
+## Point & Click Software:
 
-### Point & Click:
-- [R](https://www.r-project.org/) (and additional tools for building out packages, XQuartz, GNU Fortran 8.2 - see below for details).
-- [RStudio](https://www.rstudio.com/)
+- [R](https://www.r-project.org/)  (More setup information further down)
+- [RStudio](https://www.rstudio.com/) 
 - [Visual Studio Code](https://code.visualstudio.com/)
   - Extensions (Docker, Python, R, Git History)
   - Enable [launching from the terminal via the `code` command](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
@@ -12,25 +11,27 @@ Instructions for setting up a MacBook Pro in bcgov, tailored for data science wo
 - [Skype for Business](https://support.office.com/en-us/article/Install-Skype-for-Business-8a0d4da8-9d58-44f9-9759-5c8f340cb3fb?ui=en-US&rs=en-US&ad=US#OS_Type=Mac)\*\*
 - Cisco AnyConnect VPN - Remote Access User Guide and download link for AnyConnect on the [Remote Access Services Page](https://ssbc-client.gov.bc.ca/services/remoteaccess/documents.htm)\*\*
 
-\* Available from the Mac App Store
-\*\* Should be pre-installed on setup
+\*    Available from the Mac App Store
+</br>
+\*\*  Should be pre-installed on setup
 
-#### Optional/as-needed:
+The following are optional to be download as needed:
 
 - [Inkscape](https://inkscape.org/en/)
 - [Docker](https://www.docker.com/)
 - [Git Kraken](https://www.gitkraken.com/) - visual git tool
 
+
 ## Software Set-Up & Tweaks
 
-### Changing IDIR password
+#### Changing IDIR password:
 TODO
 
-### Safari:
+#### Safari:
 - Safari > Preferences > Advanced > Show full website address, Show Develop menu
 - Safari > View > Show status bar
 
-### Finder:
+#### Finder:
 - Show dotfiles: Cmd + Shift + `.` OR make them show all the time
   - In Terminal: `defaults write com.apple.finder AppleShowAllFiles -bool YES; killall Finder`
   - To hide them again: `defaults write com.apple.finder AppleShowAllFiles -bool NO; killall Finder`
@@ -38,33 +39,40 @@ TODO
 - Prevent `._DStore` files from being created on network shares:
   - `defaults write com.apple.desktopservices DSDontWriteNetworkStores true`
 
-### Alfred:
+#### Alfred:
 
 The Alfred App is super handy for quickly opening files/folders <https://www.alfredapp.com/>. You can see a demo and how to tailor the App in this YouTube video [here](https://www.youtube.com/watch?v=boKFxBniUH0). To enable it open Rstudio projects you can "register" the .Rproj file type with Alfred. Go to Alfred’s Preferences > Features > Default Results > Advanced…. Drag any .Rproj file onto this space and then close.
 
-### Terminal:
+#### Terminal:
 Enable New Terminal at Folder: System Preferences > Keyboard > Shortcuts > Services (from [here](https://stackoverflow.com/questions/420456/open-terminal-here-in-mac-os-finder))
 
 You can make your terminal prettier (and more productive) in many ways... One popular terminal alternative is [iTerm2](https://www.iterm2.com/). Here is [one example](https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/) of how to use iTerm2 with the zsh shell (now the default in macOS Catalina and Big Sur) and Oh-My-ZSH.
 
-## R
+#### Java
+ *Hopefully you never need this, this has not been tested lately*
+- Download and install the [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- In the terminal, type: `sudo R CMD javareconf`
+- In R, type: `install.packages("rJava", type = "source")
 
-### Setup local R library location
+## R and R Studio
+
+#### Setup local R library location
 
 ```
 cd && mkdir Rlibrary
 echo R_LIBS=~/Rlibrary >> .Renviron
 ```
 
-### Java
- *Hopefully you never need this, this has not been tested lately*
-- Download and install the [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-- In the terminal, type: `sudo R CMD javareconf`
-- In R, type: `install.packages("rJava", type = "source")
 
-## [Homebrew](https://brew.sh/)
+#### Install R build tools:
+Install the appropriate `gfortran` for compiling packages from source. As of Sept 2021, the correct gfortran to install is [version 8.2](https://github.com/fxcoudert/gfortran-for-macOS/releases/tag/8.2) (for all macOS versions including Big Sur, even though it's labelled 'Mojave').
+- More detailed installation instructions and link to download: https://thecoatlessprofessor.com/programming/cpp/r-compiler-tools-for-rcpp-on-macos/
 
-### Install Homebrew
+
+
+## Homebrew
+
+#### Installation:
 
 Most up to date installation instructions [here](https://brew.sh).
 
@@ -80,11 +88,45 @@ If it doesn't give you an output like `/Library/Developer/CommandLineTools` you 
 xcode-select --install
 ```
 
-### Install R build tools:
-Install the appropriate `gfortran` for compiling packages from source. As of Sept 2021, the correct gfortran to install is [version 8.2](https://github.com/fxcoudert/gfortran-for-macOS/releases/tag/8.2) (for all macOS versions including Big Sur, even though it's labelled 'Mojave').
-- More detailed installation instructions and link to download: https://thecoatlessprofessor.com/programming/cpp/r-compiler-tools-for-rcpp-on-macos/
+#### Maintenance:
+To update homebrew and check what packages are available to update:
+```
+brew update
+```
 
-### Git: Install and configure [git](https://git-scm.com/)
+To upgrade packages:
+```
+brew upgrade
+```
+
+To cleanup
+```
+brew cleanup
+```
+
+To help diagnose problems:
+```
+brew doctor
+```
+
+To do it all at once (this could take a while if big packages are updated)
+```
+brew update && brew upgrade && brew cleanup
+```
+
+#### Homebrew Python 3:
+
+Lot's of information here:
+- https://www.davidculley.com/installing-python-on-a-mac/
+- https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/
+
+```
+brew install python
+```
+
+
+## Git and GitHub
+#### Git: Install and configure [git](https://git-scm.com/)
 ```
 # install with homebrew:
 brew install git
@@ -94,7 +136,7 @@ git config --global core.editor "nano"
 git config --global credential.helper osxkeychain
 ```
 
-### GitHub: Set-up [GitHub](https://github.com/) authorization
+#### GitHub: Set-up [GitHub](https://github.com/) authorization
 
 The simplest way to do this is actually through R. This process ensures that you are authenticated with GitHub for command-line use, as well as through RStudio and/or other git GUIs:
 
@@ -155,46 +197,14 @@ brew install node
 npm install -g mapshaper
 ```
 
-## [OpenShift](https://www.openshift.com/): Install OpenShift command-line tools:
+## OpenShift
+#### Install [OpenShift](https://www.openshift.com/) command-line tools:
 ```
 brew install openshift-cli
 ```
 
-## Homebrew maintenance:
-To update homebrew and check what packages are available to update:
-```
-brew update
-```
-
-To upgrade packages:
-```
-brew upgrade
-```
-
-To cleanup
-```
-brew cleanup
-```
-
-To help diagnose problems:
-```
-brew doctor
-```
-
-To do it all at once (this could take a while if big packages are updated)
-```
-brew update && brew upgrade && brew cleanup
-```
-
-## Homebrew Python 3:
-- https://www.davidculley.com/installing-python-on-a-mac/
-- https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/
-
-```
-brew install python
-```
-
-## QGIS: Install [QGIS](http://qgis.org/en/site/)
+## QGIS 
+#### Install [QGIS](http://qgis.org/en/site/)
 
 ```
 brew tap osgeo/osgeo4mac && brew tap --repair
@@ -223,15 +233,16 @@ if [ -f ~/.bashrc ]; then
 fi
 EOF
 ```
-## PostgreSQL/PostGIS set-up:
+## PostgreSQL/PostGIS
 
-### Install
+#### Installation
 
 ```
 brew install postgresql
 brew install postgis
 ```
 
+#### Set environment variables/aliases
 Copy and paste (and hit return) the following script, which will set environment variables/create aliases that are used often for postgis stuff:
 
 ```
@@ -254,7 +265,7 @@ export GDAL_DRIVER_PATH=/usr/local/lib/gdalplugins
 EOF
 ```
 
-## Tune your postgresql installation:
+#### Tune your postgresql installation:
 
 These settings work well on a 2016 Macbook Pro with 16GB of memory. For more information on tuning, see the [postgresql tuning wiki](https://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server).
 
