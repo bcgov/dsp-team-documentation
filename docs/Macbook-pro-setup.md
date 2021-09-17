@@ -1,12 +1,13 @@
-Instructions for setting up a MacBook Pro in bcgov, tailored for data science workflows used by the [Data Science Partnerships] team.
+# Mac Book Set Up 
+This document contains instructions for setting up a MacBook Pro in B.C. Government, tailored for data science workflows used by the Data Science Partnerships team.  The document is organized with least complex steps at the top (i.e. point and click downloads) leading to tools that require more advanced setup at the bottom. Some of the setup instructions assume a working knowledge of Unix/Linux.  
 
-## Point & Click Software:
+## Point & Click Software
 
-- [R](https://www.r-project.org/)  (More setup information further down)
-- [RStudio](https://www.rstudio.com/) 
+- [R](https://www.r-project.org/)  - more setup information further down
+- [RStudio](https://www.rstudio.com/) - requires R 3.0.1 or higher (as of Sept. 2021)
 - [Visual Studio Code](https://code.visualstudio.com/)
-  - Extensions (Docker, Python, R, Git History)
-  - Enable [launching from the terminal via the `code` command](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
+  - [Extensions](https://code.visualstudio.com/docs/editor/extension-marketplace) (Docker, Python, R, Git History)
+  - [Enable launching](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) from the terminal via the `code` command
 - [Trello](https://trello.com/)\*
 - [Skype for Business](https://support.office.com/en-us/article/Install-Skype-for-Business-8a0d4da8-9d58-44f9-9759-5c8f340cb3fb?ui=en-US&rs=en-US&ad=US#OS_Type=Mac)\*\*
 - Cisco AnyConnect VPN - Remote Access User Guide and download link for AnyConnect on the [Remote Access Services Page](https://ssbc-client.gov.bc.ca/services/remoteaccess/documents.htm)\*\*
@@ -28,20 +29,26 @@ The following are optional to be download as needed:
 TODO
 
 #### Safari:
-- Safari > Preferences > Advanced > Show full website address, Show Develop menu
+- Safari > Preferences > Advanced > Show full website address
+- Safari > Preferences > Advanced > Show Develop menu
 - Safari > View > Show status bar
 
 #### Finder:
-- Show dotfiles: Cmd + Shift + `.` OR make them show all the time
-  - In Terminal: `defaults write com.apple.finder AppleShowAllFiles -bool YES; killall Finder`
-  - To hide them again: `defaults write com.apple.finder AppleShowAllFiles -bool NO; killall Finder`
-  - http://www.macosxtips.co.uk/index_files/quickly-show-hidden-files.php
+- Show [dotfiles](http://www.macosxtips.co.uk/index_files/quickly-show-hidden-files.php)
+  - one time: Cmd + Shift + `.` 
+  - to show them all the time: (from Terminal)
+      `defaults write com.apple.finder AppleShowAllFiles -bool YES; killall Finder`
+  - to hide them again: (from Terminal)
+     `defaults write com.apple.finder AppleShowAllFiles -bool NO; killall Finder`
 - Prevent `._DStore` files from being created on network shares:
-  - `defaults write com.apple.desktopservices DSDontWriteNetworkStores true`
+   - `defaults write com.apple.desktopservices DSDontWriteNetworkStores true`
 
 #### Alfred:
 
-The Alfred App is super handy for quickly opening files/folders <https://www.alfredapp.com/>. You can see a demo and how to tailor the App in this YouTube video [here](https://www.youtube.com/watch?v=boKFxBniUH0). To enable it open Rstudio projects you can "register" the .Rproj file type with Alfred. Go to Alfred’s Preferences > Features > Default Results > Advanced…. Drag any .Rproj file onto this space and then close.
+The [Alfred App](https://www.alfredapp.com/) is super handy for quickly opening files/folders. You can see a demo and how to tailor the App in this YouTube video [here](https://www.youtube.com/watch?v=boKFxBniUH0). To enable it open Rstudio projects you can "register" the .Rproj file type with Alfred. 
+
+ - Go to Alfred’s Preferences > Features > Default Results > Advanced…. 
+ - Drag any .Rproj file onto this space and then close.
 
 #### Terminal:
 Enable New Terminal at Folder: System Preferences > Keyboard > Shortcuts > Services (from [here](https://stackoverflow.com/questions/420456/open-terminal-here-in-mac-os-finder))
