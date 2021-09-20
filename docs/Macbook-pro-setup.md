@@ -63,18 +63,29 @@ You can make your terminal prettier (and more productive) in many ways... One po
 
 ## R and R Studio
 
+**Note:** It's handy to save your personal dotfiles and transfer them 
+to you new computer (after reviewing them to make sure they are doing what you want them to). Some of these may contain sensitive information such as API keys so handle them with care. Some key ones might be:
+
+```
+~/.Rprofile
+~/.Renviron
+~/.bashrc and/or ~./bash_profile
+~/.zshrc
+~/.config/ (various files and/or folders such as rstudio)
+```
+
 #### Setup local R library location
+
+**If not already set in your personal `.Renviron` file**
 
 ```
 cd && mkdir Rlibrary
 echo R_LIBS=~/Rlibrary >> .Renviron
 ```
 
-
 #### Install R build tools:
 Install the appropriate `gfortran` for compiling packages from source. As of Sept 2021, the correct gfortran to install is [version 8.2](https://github.com/fxcoudert/gfortran-for-macOS/releases/tag/8.2) (for all macOS versions including Big Sur, even though it's labelled 'Mojave').
 - More detailed installation instructions and link to download: https://thecoatlessprofessor.com/programming/cpp/r-compiler-tools-for-rcpp-on-macos/
-
 
 
 ## Homebrew
@@ -166,16 +177,6 @@ mostly taken from [Bob Rudis' blog](https://rud.is/b/2015/10/22/installing-r-on-
 
 ```
 brew install xquartz
-brew cask install java
-
-# Tell R where Java is
-R CMD javareconf JAVA_CPPFLAGS=-I/System/Library/Frameworks/JavaVM.framework/Headers
- 
-# For latex:  (takes a long time)
-brew cask install mactex
-
-# For pandoc citeproc (https://github.com/jgm/pandoc-citeproc)
-brew install pandoc-citeproc
 
 # Some libraries for common R packages
 brew install libsvg curl libxml2 boost pandoc v8@3.15
@@ -204,23 +205,30 @@ brew install node
 npm install -g mapshaper
 ```
 
-## OpenShift
-#### Install [OpenShift](https://www.openshift.com/) command-line tools:
+#### LaTeX
+
+We are currently recommending (though still testing) installation of the [`TinyTex`](https://yihui.org/tinytex/)
+`LaTeX` distribution, which is built especially for using with R:
+
+```r
+install.packages("tinytex")
+tinytex_install()
 ```
-brew install openshift-cli
+
+This works great for RMarkdown-oriented workflows, but also provides command-line
+use for use outside R (though installation of packages must be done with `tlmgr` as no GUI exists as with MacTeX).
+
+If you'd prefer to install the core Mac LaTeX distribution with a GUI, it's easiest to install `mactex` with Homebrew:
+
 ```
+$ brew install --cask mactex
+
 
 ## QGIS 
 #### Install [QGIS](http://qgis.org/en/site/)
 
 ```
-brew tap osgeo/osgeo4mac && brew tap --repair
-brew install osgeo-qgis
-```
-
-It will likely complain that it needs addition Python packages at runtime. These can be installed with:
-```
-pip install psycopg2 matplotlib pyparsing requests future jinja2 pygments
+brew install --cask qgis
 ```
 
 ## Some shell/git tweaks
@@ -240,6 +248,16 @@ if [ -f ~/.bashrc ]; then
 fi
 EOF
 ```
+
+```
+
+## OpenShift
+#### Install [OpenShift](https://www.openshift.com/) command-line tools:
+
+```
+brew install openshift-cli
+```
+
 ## PostgreSQL/PostGIS
 
 #### Installation
