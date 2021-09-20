@@ -249,16 +249,16 @@ fi
 EOF
 ```
 
-```
+## Extra stuff, probably not needed (until it is)
 
-## OpenShift
+### OpenShift
 #### Install [OpenShift](https://www.openshift.com/) command-line tools:
 
 ```
 brew install openshift-cli
 ```
 
-## PostgreSQL/PostGIS
+### PostgreSQL/PostGIS
 
 #### Installation
 
