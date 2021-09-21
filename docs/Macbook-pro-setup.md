@@ -1,5 +1,9 @@
-# Mac Book Set Up 
-This document contains instructions for setting up a MacBook Pro in B.C. Government, tailored for data science workflows used by the Data Science Partnerships team.  The document is organized with least complex steps at the top (i.e. point and click downloads) leading to tools that require more advanced setup at the bottom. Some of the setup instructions assume a working knowledge of Unix/Linux.  
+# MacBook Pro Set Up 
+
+This document contains instructions for setting up a MacBook Pro in B.C. Government, tailored for data science workflows used by the Data Science Partnerships team.  The document is organized with least complex steps at the top (i.e. point and click downloads) leading to tools that require more advanced setup at the bottom. Some of the setup instructions assume a working knowledge of Unix/Linux. 
+
+README: Take care to vet whether the setup advice is relevant (or still relevant) for your OS or machine, and to ensure knowledge of and keeping with the bcgov [Appropriate Use Policy](https://www2.gov.bc.ca/gov/content?id=33A6DE0643E54676B21033E5DA8E03CF).
+
 
 ## Point & Click Software
 
@@ -26,8 +30,12 @@ The following are optional to be download as needed:
 
 ## Software Set-Up & Tweaks
 
-#### Changing IDIR password:
-TODO
+#### MacBook 
+- Customize the touchbar <https://support.apple.com/en-ca/guide/mac-help/mchl5a63b060/mac>, for example adding the Lock Screen button for quick access/use
+
+
+#### Changing IDIR Password:
+TO DO
 
 #### Safari:
 - Safari > Preferences > Advanced > Show full website address
@@ -43,6 +51,7 @@ TODO
      `defaults write com.apple.finder AppleShowAllFiles -bool NO; killall Finder`
 - Prevent `._DStore` files from being created on network shares:
    - `defaults write com.apple.desktopservices DSDontWriteNetworkStores true`
+- Customize the Finder toolbar and sidebar <https://support.apple.com/en-ca/guide/mac-help/mchlp3011/mac>
 
 #### Alfred:
 
@@ -54,13 +63,10 @@ The [Alfred App](https://www.alfredapp.com/) is super handy for quickly opening 
 #### Terminal:
 Enable New Terminal at Folder: System Preferences > Keyboard > Shortcuts > Services (from [here](https://stackoverflow.com/questions/420456/open-terminal-here-in-mac-os-finder))
 
-You can make your terminal prettier (and more productive) in many ways... One popular terminal alternative is [iTerm2](https://www.iterm2.com/). Here is [one example](https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/) of how to use iTerm2 with the zsh shell (now the default in macOS Catalina and Big Sur) and Oh-My-ZSH.
+You can make your terminal prettier (and more productive) in many ways...one popular terminal alternative is [iTerm2](https://www.iterm2.com/). Here is [one example](https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/) of how to use iTerm2 with the zsh shell (now the default in macOS Catalina and Big Sur) and Oh-My-ZSH.
 
-#### Java
- *Hopefully you never need this, this has not been tested lately*
-- Download and install the [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-- In the terminal, type: `sudo R CMD javareconf`
-- In R, type: `install.packages("rJava", type = "source")
+
+
 
 ## R and R Studio
 
@@ -223,6 +229,13 @@ If you'd prefer to install the core Mac LaTeX distribution with a GUI, it's easi
 
 ```
 $ brew install --cask mactex
+```
+
+#### Java
+ *Hopefully you never need this, this has not been tested lately*
+- Download and install the [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- In the terminal, type: `sudo R CMD javareconf`
+- In R, type: `install.packages("rJava", type = "source")
 
 
 ## QGIS 
@@ -233,10 +246,12 @@ brew install --cask qgis
 ```
 
 ## Some shell/git tweaks
+```
 Add ~/bin to your path as a place to hold custom shell scripts, set editor to nano instead of vi:
 
-```
 cat << EOF >> $HOME/.bashrc
+```
+
 # Set editor to nano instead of vi
 export EDITOR="nano"
 # put custom shell scripts etc in ~/bin dir, make sure available on PATH:
