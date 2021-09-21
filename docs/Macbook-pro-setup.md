@@ -2,7 +2,7 @@
 
 This document contains instructions for setting up a MacBook Pro in B.C. Government, tailored for data science workflows used by the Data Science Partnerships team.  The document is organized with least complex steps at the top (i.e. point and click downloads) leading to tools that require more advanced setup at the bottom. Some of the setup instructions assume a working knowledge of Unix/Linux. 
 
-README: Take care to vet whether the setup advice is relevant (or still relevant) for your OS or machine, and to ensure knowledge of and keeping with the bcgov [Appropriate Use Policy](https://www2.gov.bc.ca/gov/content?id=33A6DE0643E54676B21033E5DA8E03CF).
+*README*: Take care to vet whether the setup advice is relevant (or still relevant) for your OS or machine, and to ensure knowledge of and keeping with the bcgov [Appropriate Use Policy](https://www2.gov.bc.ca/gov/content?id=33A6DE0643E54676B21033E5DA8E03CF).
 
 
 ## Point & Click Software
