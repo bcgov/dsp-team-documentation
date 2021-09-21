@@ -9,6 +9,7 @@ This document contains instructions for setting up a MacBook Pro in B.C. Governm
   - [Extensions](https://code.visualstudio.com/docs/editor/extension-marketplace) (Docker, Python, R, Git History)
   - [Enable launching](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) from the terminal via the `code` command
 - [Trello](https://trello.com/)\*
+- [Microsoft Remote Desktop](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12)\*
 - [Skype for Business](https://support.office.com/en-us/article/Install-Skype-for-Business-8a0d4da8-9d58-44f9-9759-5c8f340cb3fb?ui=en-US&rs=en-US&ad=US#OS_Type=Mac)\*\*
 - Cisco AnyConnect VPN - Remote Access User Guide and download link for AnyConnect on the [Remote Access Services Page](https://ssbc-client.gov.bc.ca/services/remoteaccess/documents.htm)\*\*
 
