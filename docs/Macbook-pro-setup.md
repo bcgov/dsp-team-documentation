@@ -21,7 +21,7 @@ README: Take care to vet whether the setup advice is relevant (or still relevant
 </br>
 \*\*  Should be pre-installed on setup
 
-The following are optional to be download as needed:
+The following are optional to be download as/if needed:
 
 - [Inkscape](https://inkscape.org/en/)
 - [Docker](https://www.docker.com/)
@@ -31,8 +31,7 @@ The following are optional to be download as needed:
 ## Software Set-Up & Tweaks
 
 #### MacBook 
-- Customize the touchbar <https://support.apple.com/en-ca/guide/mac-help/mchl5a63b060/mac>, for example adding the Lock Screen button for quick access/use
-
+- [Customize the touchbar](https://support.apple.com/en-ca/guide/mac-help/mchl5a63b060/mac), for example adding the Lock Screen button for quick access/use
 
 #### Changing IDIR Password:
 TO DO
@@ -51,7 +50,7 @@ TO DO
      `defaults write com.apple.finder AppleShowAllFiles -bool NO; killall Finder`
 - Prevent `._DStore` files from being created on network shares:
    - `defaults write com.apple.desktopservices DSDontWriteNetworkStores true`
-- Customize the Finder toolbar and sidebar <https://support.apple.com/en-ca/guide/mac-help/mchlp3011/mac>
+- [Customize the Finder toolbar and sidebar](https://support.apple.com/en-ca/guide/mac-help/mchlp3011/mac)
 
 #### Alfred:
 
@@ -66,12 +65,10 @@ Enable New Terminal at Folder: System Preferences > Keyboard > Shortcuts > Servi
 You can make your terminal prettier (and more productive) in many ways...one popular terminal alternative is [iTerm2](https://www.iterm2.com/). Here is [one example](https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/) of how to use iTerm2 with the zsh shell (now the default in macOS Catalina and Big Sur) and Oh-My-ZSH.
 
 
-
-
-## R and R Studio
+## R & RStudio
 
 **Note:** It's handy to save your personal dotfiles and transfer them 
-to you new computer (after reviewing them to make sure they are doing what you want them to). Some of these may contain sensitive information such as API keys so handle them with care. Some key ones might be:
+to you new computer (after reviewing them to make sure they are doing what you want them to). Some of these may contain sensitive information such as API keys so handle them with care. Some key dotfiles might be:
 
 ```
 ~/.Rprofile
@@ -81,7 +78,7 @@ to you new computer (after reviewing them to make sure they are doing what you w
 ~/.config/ (various files and/or folders such as rstudio)
 ```
 
-#### Setup local R library location
+#### Setup Local R Library Location
 
 **If not already set in your personal `.Renviron` file**
 
@@ -90,9 +87,21 @@ cd && mkdir Rlibrary
 echo R_LIBS=~/Rlibrary >> .Renviron
 ```
 
-#### Install R build tools:
+#### RStudio Global Defaults
+RStudio >> Tools >> Global Options >> General >> Basic:
+
+- untick `Restore .RData into workspace at startup`
+- `Save workspace to .RData on exit: <NEVER>`
+
+RStudio >> Tools >> Global Options >> General >> Advanced:
+
+- tick `Show .Last.value in environment listing`
+
+
+#### Install R Build Tools:
 Install the appropriate `gfortran` for compiling packages from source. As of Sept 2021, the correct gfortran to install is [version 8.2](https://github.com/fxcoudert/gfortran-for-macOS/releases/tag/8.2) (for all macOS versions including Big Sur, even though it's labelled 'Mojave').
 - More detailed installation instructions and link to download: https://thecoatlessprofessor.com/programming/cpp/r-compiler-tools-for-rcpp-on-macos/
+
 
 
 ## Homebrew
@@ -113,7 +122,7 @@ If it doesn't give you an output like `/Library/Developer/CommandLineTools` you 
 xcode-select --install
 ```
 
-#### Maintenance:
+#### Homebrew Maintenance:
 To update homebrew and check what packages are available to update:
 ```
 brew update
@@ -139,19 +148,10 @@ To do it all at once (this could take a while if big packages are updated)
 brew update && brew upgrade && brew cleanup
 ```
 
-#### Homebrew Python 3:
-
-Lot's of information here:
-- https://www.davidculley.com/installing-python-on-a-mac/
-- https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/
-
-```
-brew install python
-```
-
-
 ## Git and GitHub
-#### Git: Install and configure [git](https://git-scm.com/)
+
+#### Git: Install and configure [Git](https://git-scm.com/)
+
 ```
 # install with homebrew:
 brew install git
@@ -161,7 +161,7 @@ git config --global core.editor "nano"
 git config --global credential.helper osxkeychain
 ```
 
-#### GitHub: Set-up [GitHub](https://github.com/) authorization
+#### GitHub: Set-up [GitHub](https://github.com/) Authorization
 
 The simplest way to do this is actually through R. This process ensures that you are authenticated with GitHub for command-line use, as well as through RStudio and/or other git GUIs:
 
@@ -179,38 +179,6 @@ At the prompt, paste the key that you previously copied from GitHub.
 In general, the online book [Happy Git with R](https://happygitwithr.com) provides the best and most up-to-date advice for working with R and Git/GitHub. To learn more about credential caching for git and more detailed instructions, see [this chapter](https://happygitwithr.com/credential-caching.html#credential-caching).
 
 
-## Install a bunch of data-sciency tools 
-mostly taken from [Bob Rudis' blog](https://rud.is/b/2015/10/22/installing-r-on-os-x-100-homebrew-edition/)
-
-```
-brew install xquartz
-
-# Some libraries for common R packages
-brew install libsvg curl libxml2 boost pandoc v8@3.15
-
-# R spatial stuff (sf etc. takes a long time) - only needed if want to build sf from source
-brew install pkg-config
-brew install udunits
-brew install gdal
-
-# Install ESRI File GDB drivers so can write to .gdb
-# requires you to add `export GDAL_DRIVER_PATH=/usr/local/lib/gdalplugins` to your PATH
-brew tap osgeo/osgeo4mac && brew tap --repair
-brew install osgeo-gdal-filegdb
-
-## Fira-code is a lovely coding font
-brew tap homebrew/cask-fonts
-brew install font-fira-code
-
-## imagemagick for command-line image manipulation and use of the 'magick' R package
-brew install imagemagick
-
-## mapshaper for editing Shapefile, GeoJSON, TopoJSON, CSV and several other data formats, written in JavaScript. 
-## We use `rmapshaper` for most task but `rmapshaper` has a size limit.
-
-brew install node
-npm install -g mapshaper
-```
 
 #### LaTeX
 
@@ -222,7 +190,7 @@ install.packages("tinytex")
 tinytex_install()
 ```
 
-This works great for RMarkdown-oriented workflows, but also provides command-line
+This works great for R Markdown-oriented workflows, but also provides command-line
 use for use outside R (though installation of packages must be done with `tlmgr` as no GUI exists as with MacTeX).
 
 If you'd prefer to install the core Mac LaTeX distribution with a GUI, it's easiest to install `mactex` with Homebrew:
@@ -231,11 +199,42 @@ If you'd prefer to install the core Mac LaTeX distribution with a GUI, it's easi
 $ brew install --cask mactex
 ```
 
+#### Libraries for Common R Packages
+
+mostly taken from [Bob Rudis' blog](https://rud.is/b/2015/10/22/installing-r-on-os-x-100-homebrew-edition/)
+
+```
+brew install xquartz
+
+# Some libraries for common R packages
+brew install libsvg curl libxml2 boost
+
+## imagemagick for command-line image manipulation and use of the 'magick' R package
+brew install imagemagick
+
+## Fira-code is a lovely coding font (opinionated/optional)
+brew tap homebrew/cask-fonts
+brew install font-fira-code
+```
+
+
 #### Java
  *Hopefully you never need this, this has not been tested lately*
+ 
 - Download and install the [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - In the terminal, type: `sudo R CMD javareconf`
 - In R, type: `install.packages("rJava", type = "source")
+
+
+## Python 3 (Homebrew)
+
+Lot's of information here:
+- https://www.davidculley.com/installing-python-on-a-mac/
+- https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/
+
+```
+brew install python
+```
 
 
 ## QGIS 
@@ -245,15 +244,40 @@ $ brew install --cask mactex
 brew install --cask qgis
 ```
 
-## Some shell/git tweaks
+## R Geospatial Tools
+
+again, mostly taken from [Bob Rudis' blog](https://rud.is/b/2015/10/22/installing-r-on-os-x-100-homebrew-edition/)
+
 ```
+## mapshaper for editing Shapefile, GeoJSON, TopoJSON, CSV and several other data formats, written in JavaScript 
+## We use the `rmapshaper` R package for most task but `rmapshaper` has a size limit
+
+brew install node
+npm install -g mapshaper
+
+
+# R spatial stuff (sf etc. takes a long time) - only needed if you want or need to build sf from source
+brew install pkg-config
+brew install udunits
+brew install gdal
+
+# Install ESRI File GDB drivers so can write to .gdb
+# requires you to add `export GDAL_DRIVER_PATH=/usr/local/lib/gdalplugins` to your PATH
+brew tap osgeo/osgeo4mac && brew tap --repair
+brew install osgeo-gdal-filegdb
+```
+
+
+## Some shell/git tweaks
+
 Add ~/bin to your path as a place to hold custom shell scripts, set editor to nano instead of vi:
 
-cat << EOF >> $HOME/.bashrc
 ```
+cat << EOF >> $HOME/.bashrc
 
 # Set editor to nano instead of vi
 export EDITOR="nano"
+
 # put custom shell scripts etc in ~/bin dir, make sure available on PATH:
 export PATH=$HOME/bin:$PATH"
 EOF
@@ -268,6 +292,7 @@ EOF
 ## Extra stuff, probably not needed (until it is)
 
 ### OpenShift
+
 #### Install [OpenShift](https://www.openshift.com/) command-line tools:
 
 ```
