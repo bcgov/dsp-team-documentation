@@ -187,7 +187,7 @@ We are currently recommending (though still testing) installation of the [`TinyT
 
 ```r
 install.packages("tinytex")
-tinytex_install()
+install_tinytex()
 ```
 
 This works great for R Markdown-oriented workflows, but also provides command-line
