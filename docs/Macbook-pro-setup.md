@@ -28,7 +28,7 @@ The following are optional to be download as/if needed:
 - [Git Kraken](https://www.gitkraken.com/) - visual git tool
 
 
-## Software Set-Up & Tweaks
+## Software Set Up & Tweaks
 
 #### MacBook 
 - [Customize the touchbar](https://support.apple.com/en-ca/guide/mac-help/mchl5a63b060/mac), for example adding the Lock Screen button for quick access/use
@@ -78,7 +78,7 @@ to you new computer (after reviewing them to make sure they are doing what you w
 ~/.config/ (various files and/or folders such as rstudio)
 ```
 
-#### Setup Local R Library Location
+#### Set Up Local R Library Location
 
 **If not already set in your personal `.Renviron` file**
 
@@ -87,7 +87,7 @@ cd && mkdir Rlibrary
 echo R_LIBS=~/Rlibrary >> .Renviron
 ```
 
-#### RStudio Global Defaults
+#### Recommended RStudio Global Defaults
 RStudio >> Tools >> Global Options >> General >> Basic:
 
 - untick `Restore .RData into workspace at startup`
@@ -103,12 +103,11 @@ Install the appropriate `gfortran` for compiling packages from source. As of Sep
 - More detailed installation instructions and link to download: https://thecoatlessprofessor.com/programming/cpp/r-compiler-tools-for-rcpp-on-macos/
 
 
-
 ## Homebrew
 
 #### Installation:
 
-Most up to date installation instructions [here](https://brew.sh).
+Most up-to-date installation instructions [here](https://brew.sh).
 
 Installing Homebrew should also install the macOS Command Line Developer tools. You can verify this by typing:
 
@@ -150,7 +149,7 @@ brew update && brew upgrade && brew cleanup
 
 ## Git and GitHub
 
-#### Git: Install and configure [Git](https://git-scm.com/)
+#### Git: Install and Configure [Git](https://git-scm.com/)
 
 ```
 # install with homebrew:
@@ -161,7 +160,7 @@ git config --global core.editor "nano"
 git config --global credential.helper osxkeychain
 ```
 
-#### GitHub: Set-up [GitHub](https://github.com/) Authorization
+#### GitHub: Set Up [GitHub](https://github.com/) Authorization
 
 The simplest way to do this is actually through R. This process ensures that you are authenticated with GitHub for command-line use, as well as through RStudio and/or other git GUIs:
 
@@ -180,7 +179,7 @@ In general, the online book [Happy Git with R](https://happygitwithr.com) provid
 
 
 
-#### LaTeX
+#### Install LaTeX
 
 We are currently recommending (though still testing) installation of the [`TinyTex`](https://yihui.org/tinytex/)
 `LaTeX` distribution, which is built especially for using with R:
