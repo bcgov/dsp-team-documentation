@@ -29,7 +29,7 @@ EOF
 - In R, type: `install.packages("rJava", type = "source")
 
 
-## Python (Homebrew)
+## Python (Conda via Homebrew)
 
 Our current recommendation is to use the [conda](https://conda.io) distribution of Python, installed with Homebrew. 
 
