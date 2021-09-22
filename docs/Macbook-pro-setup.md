@@ -216,4 +216,4 @@ brew tap homebrew/cask-fonts
 brew install font-fira-code
 ```
 
-For more advanced setup tips and/or Geospatial software setup, see [Macbook Pro Setup - Advanced Setup and Geospatial Tools](docs/Macbook-advanced-geo.md).
+For more advanced setup tips and/or Geospatial software setup, see [Macbook Pro Setup - Advanced Setup and Geospatial Tools](Macbook-advanced-geo.md).
