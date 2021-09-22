@@ -107,7 +107,7 @@ Install the appropriate `gfortran` for compiling packages from source. As of Sep
 
 #### Installation:
 
-Most up-to-date installation instructions [here](https://brew.sh).
+Follow the most up-to-date installation instructions [here](https://brew.sh).
 
 Installing Homebrew should also install the macOS Command Line Developer tools. You can verify this by typing:
 
@@ -198,20 +198,32 @@ If you'd prefer to install the core Mac LaTeX distribution with a GUI, it's easi
 $ brew install --cask mactex
 ```
 
-#### Libraries for Common R Packages
+#### System Libraries for Common R Packages
 
-mostly taken from [Bob Rudis' blog](https://rud.is/b/2015/10/22/installing-r-on-os-x-100-homebrew-edition/)
+These are mostly mostly taken from [Bob Rudis' blog](https://rud.is/b/2015/10/22/installing-r-on-os-x-100-homebrew-edition/).
+
+Xquartz is a graphics device for R, for use for displaying graphics outside of RStudio (i.e., if you are using R from the command line or need to use the X11 graphics device. X11 is much faster than the RStudio graphics device so can be useful for large complex plots such as maps).
 
 ```
 brew install xquartz
+```
 
-# Some libraries for common R packages
+You may need to install some system libraries if you want to build packages from source (i.e., new releases or development versions from GitHub), or are developing packages that rely on system libraries. This is almost always best done via Homebrew.
+
+Some common ones are: 
+
+```
 brew install libsvg curl libxml2 boost
 
 ## imagemagick for command-line image manipulation and use of the 'magick' R package
 brew install imagemagick
+```
 
-## Fira-code is a lovely coding font (opinionated/optional)
+#### Fonts
+
+You might want to install some nice fonts that are suitable for code (e.g., with [ligatures](https://betterwebtype.com/articles/2020/02/13/5-monospaced-fonts-with-cool-coding-ligatures/)), which can also be done via Homebrew. For example, [Fira-code](https://github.com/tonsky/FiraCode) is a lovely coding font:
+
+```
 brew tap homebrew/cask-fonts
 brew install font-fira-code
 ```
