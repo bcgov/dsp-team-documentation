@@ -1,35 +1,6 @@
 # Macbook Pro Setup - Advanced Setup and Geospatial Tools
 
-## Some shell/git tweaks
-
-Add ~/bin to your path as a place to hold custom shell scripts, set editor to nano instead of vi. This is only relevant if you are using `bash` instead of `zsh`:
-
-```
-cat << EOF >> $HOME/.bashrc
-
-# Set editor to nano instead of vi
-export EDITOR="nano"
-
-# put custom shell scripts etc in ~/bin dir, make sure available on PATH:
-export PATH=$HOME/bin:$PATH"
-EOF
-
-cat << EOF >> $HOME/.bash_profile
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
-fi
-EOF
-```
-
-#### Java
- *Hopefully you never need this, this has not been tested lately*
- 
-- Download and install the [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-- In the terminal, type: `sudo R CMD javareconf`
-- In R, type: `install.packages("rJava", type = "source")
-
-
-## Python (Conda via Homebrew)
+### Python (Conda via Homebrew)
 
 Our current recommendation is to use the [conda](https://conda.io) distribution of Python, installed with Homebrew. 
 
@@ -50,7 +21,35 @@ conda config --set changeps1 false # so conda doesn't change your shell prompt
 It is recommended to use [conda environments](https://conda.io/projects/conda/en/latest/user-guide/concepts/environments.html) when doing Python-based projects.
 
 
-## QGIS 
+### Some shell/git tweaks
+
+Add ~/bin to your path as a place to hold custom shell scripts, set editor to nano instead of vi. This is only relevant if you are using `bash` instead of `zsh`:
+
+```
+cat << EOF >> $HOME/.bashrc
+
+# Set editor to nano instead of vi
+export EDITOR="nano"
+
+# put custom shell scripts etc in ~/bin dir, make sure available on PATH:
+export PATH=$HOME/bin:$PATH"
+EOF
+
+cat << EOF >> $HOME/.bash_profile
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
+EOF
+```
+
+### Java
+ *Hopefully you never need this, this has not been tested lately*
+ 
+- Download and install the [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- In the terminal, type: `sudo R CMD javareconf`
+- In R, type: `install.packages("rJava", type = "source")
+
+### QGIS 
 #### Install [QGIS](http://qgis.org/en/site/)
 
 ```
@@ -89,6 +88,8 @@ brew install openshift-cli
 ```
 
 ### PostgreSQL/PostGIS
+
+NB: This documentation has not been tested since 2018. Depending on your use case, a more streamlined solution is to use Docker to set up a local container running [Postgres/PosGIS](https://registry.hub.docker.com/r/postgis/postgis/). 
 
 #### Installation
 
