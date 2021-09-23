@@ -1,4 +1,12 @@
-# Macbook Pro Setup - Advanced Setup and Geospatial Tools
+[![img](https://img.shields.io/badge/Lifecycle-Dormant-ff7f2a)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+
+# Macbook Pro Setup - Advanced Set Up and Geospatial Tools
+
+This is a "living" document with instructions for setting up advanced and geospatial software on MacBook Pro in B.C. Government. Some of the setup instructions assume a working knowledge of Unix/Linux command-line environments.
+
+*README*: Take care to vet whether the setup advice is relevant (or still relevant) for your OS or machine, and to ensure knowledge of and keeping with the bcgov [Appropriate Use Policy](https://www2.gov.bc.ca/gov/content?id=33A6DE0643E54676B21033E5DA8E03CF).
+
+_**Much of this has not been tested lately.**_
 
 ### Python (Conda via Homebrew)
 
