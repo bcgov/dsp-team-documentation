@@ -40,7 +40,7 @@ cat << EOF >> $HOME/.bashrc
 export EDITOR="nano"
 
 # put custom shell scripts etc in ~/bin dir, make sure available on PATH:
-export PATH=$HOME/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 EOF
 
 cat << EOF >> $HOME/.bash_profile
