@@ -4,6 +4,8 @@ Here we present a living document of some best practices guidelines we use that 
 
 ## Branch Naming Conventions
 
+Fixes and issues: fix-[issue_description]-[issue_number]
+
 
 ## Keep Repositories Current
 
