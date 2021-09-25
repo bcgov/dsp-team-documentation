@@ -1,26 +1,12 @@
 # Best Practices Guidlines for Data Science Partnerships Team
 
-Here we present a living document of some best practices guidelines we use that helps manage work in the Data Science Partnerships Program. 
+Here we present a living document of some best practices guidelines we use that helps manage work in the Data Science Partnerships Program.     
 
-## Branch Naming Conventions
+## GitHub and version control
+
+[Top GitHub best practices guide for developers](https://www.datree.io/resources/github-best-practices) published by DatTree provides a great overview of some standard industry best practices for improving code quality, security, and writing good code.   The DSP Team has established the following list of guidelines specific to work within our team.
+
+#### Branch Naming Conventions
 
 Fixes and issues: fix-[issue_description]-[issue_number]
-
-
-## Keep Repositories Current
-
-Merging your base branch into your current branch frequently as you work suggested every xx days/hours.
-
-Contributorsare removed from a repository if they haven't contributed in xxx days.
-
-### Cloning
-
-### Branching
-
-### Pull Requests
-
-### Reviews
-
-### Merge
-
 
