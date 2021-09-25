@@ -4,7 +4,7 @@ Here we present a living document of some best practices guidelines we use that 
 
 ## GitHub and version control
 
-[Top GitHub best practices guide for developers](https://www.datree.io/resources/github-best-practices) published by DatTree provides a great overview of some standard industry best practices for improving code quality, security, and writing good code.   The DSP Team has established the following list of guidelines specific to work within our team.
+[Top GitHub best practices guide for developers](https://www.datree.io/resources/github-best-practices) published by DatTree provides a great overview of some standard industry best practices for improving code quality, security, and writing good code.   Additionally, the DSP Team has established the following list of guidelines specific to work we do within our team.
 
 #### Branch Naming Conventions
 
