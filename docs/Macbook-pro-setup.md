@@ -65,20 +65,18 @@ You can make your terminal prettier (and more productive) in many ways...one pop
 
 #### Change IDIR Password
 
-The OCIO will send out a reminder email every 90 days prompting you when it's time change your password, however you may change your password at any time [here](https://www.pwchange.gov.bc.ca).   The email will include the following details:  
+The OCIO will send out a reminder email every 90 days prompting you when it's time change your password, however you may change your password at any time [here](https://www.pwchange.gov.bc.ca).  Further details including alternative pathways can be found in [How to Change your Password](https://citz.sp.gov.bc.ca/sites/ES/DS/WS/Shared%20Documents/Support%20Information/Password%20Reset%20Instructions.pdf).
 
-- Make sure you are logged off all of your devices and have deleted the BCNGN wireless connection from your mobile devices.
-- Passwords:
-  - must be 10 or more characters.
-  - must contain at least 1 UPPER case letter.
-  - must contain at least 1 lower case letter.
-  - must contain at least 1 number.
-  - must not contain your user name.
-  - your last 24 passwords cannot be used.
-- For BC Government forms or websites requiring a secure log on, clients must type 'IDIR' and a back-slash in front of their user ID (e.g. idir\\jsmith).
-- Further best practice links:
-  - [How to Change your Password](https://citz.sp.gov.bc.ca/sites/ES/DS/WS/Shared%20Documents/Support%20Information/Password%20Reset%20Instructions.pdf)
-  - [Account Lockouts](https://citz.sp.gov.bc.ca/sites/ES/DS/WS/Shared%20Documents/Support%20Information/Account%20Lockouts.pdf)
+Passwords:
+
+ - must be 10 or more characters.
+ - must contain at least 1 UPPER case letter.
+ - must contain at least 1 lower case letter.
+ - must contain at least 1 number.
+ - must not contain your user name.
+ - your last 24 passwords cannot be used.
+
+If you are locked out of your account, please visit [Account Lockouts](https://citz.sp.gov.bc.ca/sites/ES/DS/WS/Shared%20Documents/Support%20Information/Account%20Lockouts.pdf).
 
 
 ## R & RStudio
