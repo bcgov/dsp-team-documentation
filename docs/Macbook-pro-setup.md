@@ -63,6 +63,13 @@ Enable New Terminal at Folder: System Preferences > Keyboard > Shortcuts > Servi
 
 You can make your terminal prettier (and more productive) in many ways...one popular terminal alternative is [iTerm2](https://www.iterm2.com/). Here is [one example](https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/) of how to use iTerm2 with the zsh shell (now the default in macOS Catalina and Big Sur) and Oh-My-ZSH.
 
+#### Change IDIR Password
+
+The OCIO will send out a reminder email every 90 days prompting you when it's time change your password, however you may change your password at any time.  The email will include the following details to help you accomplish this:  
+
+
+
+
 
 ## R & RStudio
 
