@@ -63,6 +63,21 @@ Enable New Terminal at Folder: System Preferences > Keyboard > Shortcuts > Servi
 
 You can make your terminal prettier (and more productive) in many ways...one popular terminal alternative is [iTerm2](https://www.iterm2.com/). Here is [one example](https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/) of how to use iTerm2 with the zsh shell (now the default in macOS Catalina and Big Sur) and Oh-My-ZSH.
 
+#### Change IDIR Password
+
+The OCIO will send out a reminder email every 90 days prompting you when it's time change your password, however you may change your password at any time [here](https://www.pwchange.gov.bc.ca).  Further details including alternative pathways can be found in [How to Change your Password](https://citz.sp.gov.bc.ca/sites/ES/DS/WS/Shared%20Documents/Support%20Information/Password%20Reset%20Instructions.pdf).
+
+Passwords:
+
+ - must be 10 or more characters.
+ - must contain at least 1 UPPER case letter.
+ - must contain at least 1 lower case letter.
+ - must contain at least 1 number.
+ - must not contain your user name.
+ - your last 24 passwords cannot be used.
+
+If you are locked out of your account, please visit [Account Lockouts](https://citz.sp.gov.bc.ca/sites/ES/DS/WS/Shared%20Documents/Support%20Information/Account%20Lockouts.pdf).
+
 
 ## R & RStudio
 
