@@ -1,3 +1,5 @@
+[![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+
 ## Steps to set-up a new Secure Environment remote machine and/or new project
 
 1. Open Chrome 

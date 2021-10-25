@@ -1,3 +1,5 @@
+[![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+
 ## DIP Secure Environment Export Checklist
 
 - [ ] Prep tables for export that meet Data Innovation Program statistical disclosure requirements
