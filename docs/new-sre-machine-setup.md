@@ -22,4 +22,4 @@
         - Change "Save workspace to .RData on exit" to "Never"  
      2. Code, Appearance, and Pane Layout - adjust to your preferred configuration
    - [ ] Open the `dipr` project in RStudio (cloned in step 3) and type `devtools::install()` to install the package.
-5. Open Explorer - right-click and select Quick Access to pin 📌 you use frequently
+5. Open Explorer - right-click and select Quick Access to pin 📌 folders you use frequently
