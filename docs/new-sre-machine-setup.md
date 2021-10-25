@@ -13,11 +13,11 @@
    - [ ] If an existing project (but a new machine), type `cd dipr && git pull`. This will prompt an authentication window where you type in your username and your PAT from step 2 as your password (if this is a new machine for an existing project, you should have your PAT in the text file you previously saved in step 2). Your gitlab credentials will now be stored for all git projects on this machine.
 4. Open RStudio
    - [ ] Pin RStudio to Taskbar
-   - [ ] Change settings: Tools > Global Options  
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. General  
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Change "Default working directory" to the directory you made in step 3.  
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Uncheck "Restore .RData into workspace at startup  
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Change "Save workspace to .RData on exit" to "Never"  
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Code, Appearance, and Pane Layout - adjust to your preferred configuration
+   - [ ] Change settings: Tools > Global Options
+     1. General  
+        - Change "Default working directory" to the directory you made in step 3.  
+        - Uncheck "Restore .RData into workspace at startup  
+        - Change "Save workspace to .RData on exit" to "Never"  
+     2. Code, Appearance, and Pane Layout - adjust to your preferred configuration
    - [ ] Open the `dipr` project in RStudio (cloned in step 3) and type `devtools::install()` to install the package.
 5. Open Explorer - right-click and select Quick Access to pin 📌 you use frequently
