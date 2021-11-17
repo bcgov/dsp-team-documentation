@@ -200,7 +200,7 @@ We are currently recommending (though still testing) installation of the [`TinyT
 
 ```r
 install.packages("tinytex")
-install_tinytex()
+tinytex::install_tinytex()
 ```
 
 This works great for R Markdown-oriented workflows, but also provides command-line
