@@ -12,7 +12,7 @@
    - [ ] Pin Git Bash to Taskbar
    - [ ] cd to `/R/working`. Create a user directory for your self with your first name in either `/R/working/` or `/R/working/users` depending on the convention of the project and `cd` into that directory. (e.g., `mkdir andy && cd andy`)
    - [ ] If this is a new project, type `git clone https://projectsc.popdata.bc.ca/shares/dipr.git && cd dipr`. 
-   - [ ] If an existing project (but a new machine), type `cd dipr && git pull`. This will prompt an authentication window where you type in your username and your PAT from step 2 as your password (if this is a new machine for an existing project, you should have your PAT in the text file you previously saved in step 2). Your gitlab credentials will now be stored for all git projects on this machine.
+   - [ ] If an existing project (but a new machine), type `cd dipr && git pull`. This will prompt an authentication window where you type in your username and your PAT from step 2 as your password (if this is a new machine for an existing project, you should have your PAT in the text file you previously saved in step 2). Your gitlab credentials will now be stored for all git projects on this machine. Note: if you entered your PAT incorrectly the incorrect credentials will be stored and you will be unable to interact with git. You can change/reset it by opening Credential Manager in the Windows Control Panel and under "Windows Credentials" there will be a gitlab entry you can then edit.
 4. Open RStudio
    - [ ] Pin RStudio to Taskbar
    - [ ] Change settings: Tools > Global Options
