@@ -191,9 +191,16 @@ At the prompt, paste the key that you previously copied from GitHub.
 
 In general, the online book [Happy Git with R](https://happygitwithr.com) provides the best and most up-to-date advice for working with R and Git/GitHub. To learn more about credential caching for git and more detailed instructions, see [this chapter](https://happygitwithr.com/credential-caching.html#credential-caching).
 
+#### GPG Keys
+
+If you want to [sign your git commits with GPG](https://docs.github.com/en/authentication/managing-commit-signature-verification), this is a [good overview](https://dev.to/wes/how2-using-gpg-on-macos-without-gpgtools-428f) for how to set it up.
+
+If you are moving computers (or reinstalling your OS), [here are some tips](https://www.phildev.net/pgp/gpg_moving_keys.html) for moving your existing GPG keys. The 'Copy All GnuPG Data' approach is the simplest and works well.
 
 
-#### Install LaTeX
+
+
+## Install LaTeX
 
 We are currently recommending (though still testing) installation of the [`TinyTex`](https://yihui.org/tinytex/)
 `LaTeX` distribution, which is built especially for using with R:
@@ -212,7 +219,7 @@ If you'd prefer to install the core Mac LaTeX distribution with a GUI, it's easi
 $ brew install --cask mactex
 ```
 
-#### System Libraries for Common R Packages
+## System Libraries for Common R Packages
 
 These are mostly mostly taken from [Bob Rudis' blog](https://rud.is/b/2015/10/22/installing-r-on-os-x-100-homebrew-edition/).
 
@@ -233,7 +240,7 @@ brew install libsvg curl libxml2 boost
 brew install imagemagick
 ```
 
-#### Fonts
+## Fonts
 
 You might want to install some nice fonts that are suitable for code (e.g., with [ligatures](https://betterwebtype.com/articles/2020/02/13/5-monospaced-fonts-with-cool-coding-ligatures/)), which can also be done via Homebrew. For example, [Fira-code](https://github.com/tonsky/FiraCode) is a lovely coding font:
 
