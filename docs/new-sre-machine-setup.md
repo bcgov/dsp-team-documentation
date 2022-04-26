@@ -11,9 +11,9 @@
 4. Open RStudio
    - [ ] Pin RStudio to Taskbar
    - [ ] Go to the repository for `dipr` in GitLab, and follow the instructions in the README to install `dipr`. This will prompt an authentication window where you type in your username and your PAT from step 2 as your password (if this is a new machine for an existing project, you should have your PAT in the text file you previously saved in step 2). Your gitlab credentials will now be stored for all git projects on this machine. 
-   - [ ] *Note: if you entered your PAT incorrectly the incorrect credentials will be stored and you will be unable to interact with gitlab. You can a) change/reset it by opening Credential Manager in the Windows Control Panel and under "Windows Credentials" there will be a gitlab entry you can then edit or b) run `credentials::git_credential_update("https://projectsc.popdata.bc.ca")` in your R console.*
-   - [ ] If you previously saved your Rstudio preferences in GitLab, restore them with `dipr::restore_rstudio_prefs)`.
-   - [ ] Otherwise change settings: Tools > Global Options
+   - [ ] *Note: if you entered your PAT incorrectly the incorrect credentials will be stored and you will be unable to interact with gitlab. You can run `credentials::git_credential_update("https://projectsc.popdata.bc.ca")` in your R console to update them.*
+   - [ ] If you previously saved your Rstudio preferences in GitLab, restore them with `dipr::restore_rstudio_prefs()`.
+   - [ ] Otherwise change your settings manually: Tools > Global Options
      1. General  
         - Change "Default working directory" to the directory you made in step 3.  
         - Uncheck "Restore .RData into workspace at startup  
