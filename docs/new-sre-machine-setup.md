@@ -7,7 +7,8 @@
    - [ ] Import bookmarks from `R:/working/bookmarks_[latest-date].html
    - [ ] Pin Chrome to Taskbar
 2. Go to GitLab in Chrome (via the new bookmarks) - sign in with `Pop Data Sso`
-   - [ ] If this is a new project: Create a Personal Access Token (User Settings > Access Tokens) and save it in a text file in your private user directory (`U:/`) or `R:/[your-project-specific-username]` - these are the same directory, just mapped twice.
+   - [ ] If this is a new project, you will need to go to 'DIP Self-Service' and join the repos that you need to work with, at a minimum `dipr`.
+   - [ ] If this is a new project: Create a Personal Access Token (User Settings > Access Tokens) and save it in a text file in your private user directory (`U:/`) or `R:/[your-project-specific-username]` - these are the same directory, just mapped twice. 
 4. Open RStudio
    - [ ] Pin RStudio to Taskbar
    - [ ] Go to the repository for `dipr` in GitLab, and follow the instructions in the README to install `dipr`. This will prompt an authentication window where you type in your username and your PAT from step 2 as your password (if this is a new machine for an existing project, you should have your PAT in the text file you previously saved in step 2). Your gitlab credentials will now be stored for all git projects on this machine. 
