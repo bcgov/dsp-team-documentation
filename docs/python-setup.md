@@ -38,6 +38,10 @@ conda activate myenv
 conda install -c conda-forge python=3.9 packageA packageB packageC...
 ```
 
+*Word of warning*
+
+   Cautionary note when using conda to install packages: sometimes, the package will not be available via conda, but only by pip. This can be accessed the same way as conda from within your active environment shell: `pip install package`. However, common practice is to avoid using pip inside a conda environment whenever possible. Look at the package installation instructions online to see the recommended install path. It will typically give a conda (with or without a -c channel) option as well as pip. By default, go for the conda option, and resort to pip only if necessary. 
+
 These are the packages that I will include in a standard environment:
 
 * **scipy**: includes statistical modeling and other scientific features 
