@@ -113,8 +113,7 @@ RStudio >> Tools >> Global Options >> General >> Advanced:
 
 
 #### Install R Build Tools:
-Install the appropriate `gfortran` for compiling packages from source. As of Sept 2021, the correct gfortran to install is [version 8.2](https://github.com/fxcoudert/gfortran-for-macOS/releases/tag/8.2) (for all macOS versions including Big Sur, even though it's labelled 'Mojave').
-- More detailed installation instructions and link to download: https://thecoatlessprofessor.com/programming/cpp/r-compiler-tools-for-rcpp-on-macos/
+Install XCode and the appropriate `gfortran` for compiling packages from source. Follow the instructions [here](https://mac.r-project.org/tools/), and don't forget to add the path to gfortran to your `PATH` in your `.Renviron` file.
 
 
 ## Homebrew
