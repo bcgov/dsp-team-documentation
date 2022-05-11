@@ -16,7 +16,7 @@
    - [ ] If you previously saved your Rstudio preferences in GitLab, restore them with `dipr::restore_rstudio_prefs()`.
    - [ ] Otherwise change your settings manually: Tools > Global Options
      1. General  
-        - Change "Default working directory" to `R:/working/users/[your--username]`.  
+        - Change "Default working directory" to `R:/working/users/[your-username]`.  
         - Uncheck "Restore .RData into workspace at startup  
         - Change "Save workspace to .RData on exit" to "Never"  
      2. Code, Appearance, and Pane Layout - adjust to your preferred configuration
