@@ -10,5 +10,5 @@ Here we present a living document of some best practices guidelines we use that 
 
 Fixes and issues: fix-[issue_description]-[issue_number]
 
-See [this presentation](http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf) for more best practices.
+See [this presentation](http://www2.stat.duke.edu/~rcs46/lectures_2015/01-markdown-git/slides/naming-slides/naming-slides.pdf) for more naming conventions best practices.
 
