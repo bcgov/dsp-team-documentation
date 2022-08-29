@@ -3,7 +3,7 @@
 # Basic Python Setup
 ---
 
-This document will get python up and running on the Windows B.C. Government computers. After conda installation, Mac steps will be similar. 
+This document will get python up and running on the Windows B.C. Government computers. After conda installation, the Mac steps will be similar. 
 
 ## 1. Python Installer
 
