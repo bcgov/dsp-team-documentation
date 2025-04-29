@@ -1,10 +1,12 @@
-[![img](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+[![Lifecycle:Retired](https://img.shields.io/badge/Lifecycle-Retired-d45500)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
 
 Data Science Partnerships Documentation
 ============================
 
 This repo is a catalogue of tools and workflows that the Data Science Partnerships program uses on a regular basis. The content in this repo is not meant to be prescriptive but rather documentation key approaches to how we work. 
+
+_This documentation repository has been **RETIRED** and is not being maintained._
 
 ### How to Contribute
 
